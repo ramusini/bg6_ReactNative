@@ -1,22 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, View } from 'react-native';
+import { Provider as PaperProvider } from 'react-native-paper';
+import { name as appName } from './app.json';
 
-import Hello from './src/components/Hello';
+// コンポーネント
+import Home from './src/screens/Home';
+import Header from './src/screens/Header';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Hello/>
-    </View>
+    <PaperProvider>
+      <Header/>
+      <Home />
+    </PaperProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+AppRegistry.registerComponent(appName, () => Main);
