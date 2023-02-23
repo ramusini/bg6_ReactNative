@@ -1,23 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
+
+// コンポーネント
+import IconButton from '../components/IconButton'
 
 export default function Home() {
-    return (
-        <View style={styles.container}>
-            <Button
-              icon="alpha-b-circle" mode="contained" onPress={() => console.log('Pressed')}>
-                Press me
-            </Button>
-        </View>
-    );
+  return (
+    <View style={styles.container}>
+      <IconButton icon="note-edit-outline"/>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
 });
