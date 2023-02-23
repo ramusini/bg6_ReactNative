@@ -5,12 +5,10 @@ import { name as appName } from './app.json';
 
 // コンポーネント
 import Home from './src/screens/Home';
-import Header from './src/components/Header';
 
 export default function App() {
   return (
     <PaperProvider>
-      <Header/>
       <Home />
     </PaperProvider>
   );

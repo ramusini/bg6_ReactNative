@@ -42,16 +42,6 @@ const MyComponent = ({
           <Text>{i}</Text>
         ))}
       </ScrollView>
-      <AnimatedFAB
-        icon={'plus'}
-        label={'Label'}
-        extended={isExtended}
-        onPress={() => console.log('Pressed')}
-        visible={visible}
-        animateFrom={'right'}
-        iconMode={'static'}
-        style={[styles.fabStyle, style, fabStyle]}
-      />
     </SafeAreaView>
   );
 };
